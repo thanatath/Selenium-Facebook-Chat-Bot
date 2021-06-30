@@ -21,6 +21,7 @@ email = '*****@gmail.com' #<-- input your mail
 pwd = '******' #<-- input your password
 people = '****' #<-- input your people name to Send text
 botText = '' #<-- input your text
+timeSend = '20:00:00' #<-- input your time in HH:MM:SS pattern
 
 def noti_Action(): #all action happend from this !
     driver = webdriver.Chrome(executable_path="chromedriver.exe", chrome_options=option)
@@ -60,7 +61,7 @@ def noti_Action(): #all action happend from this !
 
 while True:
     print(time.strftime("%H:%M:%S"))
-    if(time.strftime("%H:%M:%S") == "20:28:30"): #Check time to send text
+    if(time.strftime("%H:%M:%S") == timeSend): #Check time to send text
         noti_Action()
     time.sleep(1)
     os.system('cls')
